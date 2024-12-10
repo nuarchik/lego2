@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Document</title> 
+  <link rel="stylesheet" href="./css/detailscss.css"> 
+</head> 
+ 
+<body> 
+  <div id="clother-details"> 
+    loading....... 
+  </div> 
+  <script> 
+    document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const cardId = params.get('id');
+            console.log("id", cardId)
+            const cardDetailsContainer = document.getElementById("clother-details");
+            const cardData = {
+        creaser: { 
+          title: "Republic Creaser", 
+          description: 
+            "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.", 
+          price: "27999", 
+          images: 'https://content2.rozetka.com.ua/goods/images/big/394233354.jpg', 
+          reviews: [ 
+            "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.", 
+            "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me.", 
+            "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.", 
+          ], 
+        }, 
+        at_te: { 
+          title: "Шагохід AT-TE", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images1: 'https://content.rozetka.com.ua/goods/images/big_tile/286047621.jpg', 
+          price: "5999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        x_wing: { 
+          title: "Винищувач X-Wing", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big/375665338.jpg', 
+          price: "5999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        tantas: { 
+          title: "Посадка на борт «Тантас IV»", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big/408426132.jpg', 
+          price: "5999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        y_wing: { 
+          title: "Мікровинищувач Y-Wing Капітана Рекса", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big/436660209.jpg', 
+          price: "3999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        shattle: { 
+          title: "Шаттл джедая Асоки Тано T-6", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content2.rozetka.com.ua/goods/images/big/361087355.jpg', 
+          price: "5999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        tie_x_wing: { 
+          title: "Винищувач TIE та Корабель X-Wing", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big/453926036.jpg', 
+          price: "10000", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        fighter: { 
+          title: "TIE Fighter", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big/126975491.jpg', 
+          price: "20999", 
+          reviews: [
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        repub_fight_shatt: { 
+          title: "Республіканський бойовий корабель", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big_tile/282924488.jpg', 
+          price: "30999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        sharp_crest: { 
+          title: "Гострий гребінь", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big_tile/327293518.jpg', 
+          price: "30999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        dragon_zein: { 
+          title: "Суперсила дракона Зейна", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content2.rozetka.com.ua/goods/images/big/334841297.jpg', 
+          price: "999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        dungeon: { 
+          title: "Підземелля чаклуна-скелета", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big/356709170.jpg', 
+          price: "6999", 
+          reviews: [
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        temple: { 
+          title: "Храм-додзьо ніндзя", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big/247591138.jpg', 
+          price: "10999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        wolf_mask: { 
+          title: "Вовча маска Тіньового Додзьо", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content2.rozetka.com.ua/goods/images/big/416196170.jpg', 
+          price: "6999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        king_dragon: { 
+          title: "Егалт, Король Драконів", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big/396191061.jpg', 
+          price: "4999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        dragon_king: { 
+          title: "Драконовий робот титан Коула", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content2.rozetka.com.ua/goods/images/big/441769640.jpg', 
+          price: "6999", 
+          reviews: [
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        robots: { 
+          title: "Комнандні роботи ніндзя Лойда та Арін", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content.rozetka.com.ua/goods/images/big_tile/406336099.png', 
+          price: "3999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        ice_dragon: { 
+          title: "Крижаний Дракон Зейна", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big_tile/315707327.jpg', 
+          price: "4999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        fight_robot: { 
+          title: "Битва робота титана Зейна", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big_tile/264245177.jpg', 
+          price: "4999", 
+          reviews: [ 
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+        cristal_king: { 
+          title: "Lego Кристальний король", 
+          description: 
+            "This vibrant yellow sweater combines comfort with a striking design. Made from high-quality knit fabric, it's perfect for both casual outings and special occasions. The sunny yellow hue adds a pop of color to your wardrobe, making it a cheerful addition to your style. ", 
+          images: 'https://content1.rozetka.com.ua/goods/images/big_tile/284105637.jpg', 
+          price: "5999", 
+          reviews: [
+            "This sweater is amazing! The color is even more vibrant in person, and it's incredibly soft and warm. I've received so many compliments on it!", 
+            "I love how this sweater feels and looks. The quality of the material is excellent, and it fits perfectly. It's become one of my favorite pieces.", 
+            "The yellow sweater is a standout piece. It's not only stylish but also very cozy. Perfect for brightening up any outfit during the colder months.", 
+          ], 
+        }, 
+      }; 
+ 
+      if (cardData[cardId]) { 
+        const card = cardData[cardId]; 
+        cardDetailsContainer.innerHTML = ` 
+                <header> 
+      <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+        <div class="container-fluid"> 
+          <a class="navbar-brand" href="">Lego</a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+              <li class="nav-item"> 
+                <a class="nav-link active" aria-current="page" href="#">Home</a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link" href="#">Link</a> 
+              </li> 
+            </ul> 
+            <form class="d-flex" role="search"> 
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> 
+              <button class="btn btn-outline-success" type="submit">Пошук</button> 
+            </form> 
+          </div> 
+        </div> 
+      </nav> 
+    </header> 
+    <main> 
+    <div class="star-wars"> 
+        <div class="cards"> 
+            <div class="card" data-id="creaser"> 
+              <img src=${card.images} alt=""> 
+              <div class="card-body"> 
+                <h5 class="card-title">${card.title}</h5> 
+                <p class="card-text"><b>${card.description}</b></p> 
+                <p>${card.price}</p> 
+                <h4>${card.reviews}</h4>
+              </div> 
+              <div class="card" data-id="creaser"> 
+              <img src=${card.images} alt=""> 
+              <div class="card-body"> 
+                <h5 class="card-title">${card.title}</h5> 
+                <p class="card-text"><b>${card.description}</b></p> 
+                <p>${card.price}</p> 
+                <h4>${card.reviews}</h4>
+              </div> 
+            </div> 
+            </div> 
+        </div> 
+    </div> 
+</main>  
+                `; 
+      } else { 
+        cardDetailsContainer.innerHTML = '<h1>Товар не знайдено</h1>'; 
+      } 
+    }) 
+  </script> 
+ 
+  <script src="./js/script.js"></script> 
+</body> 
+ 
+</html>

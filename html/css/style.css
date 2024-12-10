@@ -1,0 +1,26 @@
+.cards{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card{
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    padding: 15px;
+}
+.text-foot{
+    padding: 10px;
+    margin: auto;
+}
+.foot{
+    padding: 0%;
+    margin: auto;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
